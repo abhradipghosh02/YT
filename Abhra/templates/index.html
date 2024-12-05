@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Parkinsans:wght@300..800&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Abhradip's Media Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        InstaTube Downloader
+    </header>
+
+    <div class="container">
+        <form id="downloaderForm">
+            <div class="input-group">
+                <label for="platform">Select Platform</label>
+                <select id="platform">
+                    <option value="youtube_video">YouTube Video</option>
+                    <option value="youtube_audio">YouTube Audio</option>
+                    <option value="instagram_reel">Instagram Reel</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="url">Enter Media URL</label>
+                <input type="url" id="url" placeholder="Paste YouTube or Instagram URL" required>
+            </div>
+            <div class="buttons">
+                <button type="button" id="downloadBtn">Download</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+
+        <div id="message"></div>
+    </div>
+    
+    <footer>
+        &copy; Abhradip's Media Hub 2024
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
